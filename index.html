@@ -14,10 +14,14 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <a class="skip-nav-link" href="#main-content">Skip navigation</a>
+    <a class="skip-nav-link" href="#owner">Meet the owner</a>
+    <a class="skip-nav-link" href="#address">Address</a>
+    <a class="skip-nav-link" href="#Contact-Us">Contact Us</a>
     <div class="container">
       <header class="site-header">
         <h1>Jam Box Studios</h1>
-        <nav class="main-nav">
+        <nav class="main-nav" role="navigation" aria-label="Main Navigation">
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Products</a></li>
@@ -31,7 +35,7 @@
           class="banner"
         />
       </header>
-      <main class="main-content">
+      <main class="main-content" id="main-content">
         <h2>Welcome to Jam Box</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus
@@ -45,33 +49,64 @@
           fugit culpa voluptatibus, inventore eaque, eligendi voluptatum!
           Voluptate iusto error voluptatibus.
         </p>
-        <section class="owner">
+        <section class="owner" id="owner" aria-labelledby="owner-heading">
           <h1>Meet the owner</h1>
-          <ul>
+          <ul itemscope itemtype="https://schema.org/Person">
             <li>Name: John Doe</li>
             <li>Title: CEO</li>
             <li>Email: johnjoe@jambox.ca</li>
             <li>Phone: 613-000-0000</li>
           </ul>
-          <h2>Address</h2>
-          <p>Jambox Studios 123 Guitar Road, Musicville, Danceistan B3T 0L0</p>
+          <h2 id="address">Address</h2>
+          <p itemscope itemtype="https://schema.org/PostalAddress">
+            Jambox Studios 123 Guitar Road, Musicville, Danceistan B3T 0L0
+          </p>
         </section>
-        <section class="contact-section">
+        <section
+          class="contact-section"
+          id="Contact-Us"
+          aria-labelledby="contact-us-heading"
+        >
           <h2>Contact Us</h2>
-          <form action="thanks.html">
+          <form
+            action="thanks.html"
+            itemscope
+            itemtype="https://schema.org/ContactPage"
+          >
             <label for="full-name">Full Name</label>
-            <input type="text" id="full-name" placeholder="Full Name" />
+            <input
+              type="text"
+              id="full-name"
+              placeholder="Full Name"
+              aria-required="true"
+            />
             <label for="email">Email</label>
-            <input type="text" id="email" placeholder="Email" />
+            <input
+              type="text"
+              id="email"
+              placeholder="Email"
+              aria-required="true"
+            />
             <label for="subject">Subject</label>
-            <input type="text" id="subject" placeholder="Subject" />
+            <input
+              type="text"
+              id="subject"
+              placeholder="Subject"
+              aria-required="true"
+            />
             <label for="message">Your Message</label>
-            <textarea id="message"></textarea>
+            <textarea id="message" aria-required="true"></textarea>
             <button type="submit">Send</button>
           </form>
         </section>
       </main>
-      <footer class="site-footer">&copy; 2021 Jam Box Studios</footer>
+      <footer
+        class="site-footer"
+        itemscope
+        itemtype="https://schema.org/WPFooter"
+      >
+        &copy; 2021 Jam Box Studios
+      </footer>
     </div>
   </body>
 </html>

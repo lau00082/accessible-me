@@ -1,6 +1,6 @@
 body {
   font-family: "Roboto", Helvetica, sans-serif;
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(255, 241, 241);
   margin: 0;
   padding: 0;
 }
@@ -68,4 +68,18 @@ form button {
 
 .site-footer {
   padding: 2rem 0;
+}
+
+.skip-nav-link {
+  background: rgb(255, 233, 233);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  position: absolute;
+  transform: translateY(-150%);
+  transition: transform 325ms ease-in;
+  left: 0.5rem;
+}
+
+.skip-nav-link:focus {
+  transform: translateY(0);
 }
